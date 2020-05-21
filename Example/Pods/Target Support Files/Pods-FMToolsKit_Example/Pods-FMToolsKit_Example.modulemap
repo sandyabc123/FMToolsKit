@@ -1,0 +1,6 @@
+framework module Pods_FMToolsKit_Example {
+  umbrella header "Pods-FMToolsKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - FMToolsKit (0.1.0)
+
+DEPENDENCIES:
+  - FMToolsKit (from `../`)
+
+EXTERNAL SOURCES:
+  FMToolsKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FMToolsKit: 4b0a04d2c9f699b242c8376cee78ceb631e71696
+
+PODFILE CHECKSUM: 668d0ea6beade5e293f9ade91fe6338ed9e35afa
+
+COCOAPODS: 1.8.3
