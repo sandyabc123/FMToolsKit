@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 +(UIFont *) PingFangSCBold:(float)fontSize;
 +(UIFont *) PingFangSCRegular:(float)fontSize;
 +(UIFont *) PingFangSCMedium:(float)fontSize;
++(UIFont *) PingFangSCSemibold:(float)fontSize;
 
-+(NSInteger)resetFont:(CGFloat)fontSize;
 @end
 
 NS_ASSUME_NONNULL_END
