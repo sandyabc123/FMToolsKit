@@ -1,19 +1,19 @@
 {
   "name": "FMToolsKit",
-  "version": "0.1.0",
+  "version": "1.0",
   "summary": "A short description of FMToolsKit.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/1064287667@qq.com/FMToolsKit",
+  "homepage": "https://github.com/sandyabc123/FMToolsKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "1064287667@qq.com": "miaolijun@lanyife.com"
+    "miaolijun@lanyife.com": "1064287667@qq.com"
   },
   "source": {
-    "git": "https://github.com/1064287667@qq.com/FMToolsKit.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/sandyabc123/FMToolsKit.git",
+    "tag": "1.0"
   },
   "platforms": {
     "ios": "8.0"

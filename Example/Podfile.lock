@@ -1,5 +1,5 @@
 PODS:
-  - FMToolsKit (0.1.0)
+  - FMToolsKit (1.0)
 
 DEPENDENCIES:
   - FMToolsKit (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FMToolsKit: 4b0a04d2c9f699b242c8376cee78ceb631e71696
+  FMToolsKit: 3dbd771b83595b4308707a6103ee7f0f9e8ab602
 
 PODFILE CHECKSUM: 668d0ea6beade5e293f9ade91fe6338ed9e35afa
 

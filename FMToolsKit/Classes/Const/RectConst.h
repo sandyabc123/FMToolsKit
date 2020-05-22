@@ -12,21 +12,6 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
 
-#define IS_IPAD                 (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define IS_IPHONE               (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define IS_RETINA               ([[UIScreen mainScreen] scale] >= 2.0)
-#define IS_IPHONE_4_OR_LESS     (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
-#define IS_IPHONE_5S_OR_LESS    (IS_IPHONE && SCREEN_WIDTH == 320.0)
-#define IS_IPHONE_5             (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
-#define IS_IPHONE_6             (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
-#define IS_IPHONE_6P            (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
-#define IS_IphoneX              (SCREEN_HEIGHT == 812.0)
-
-#define X(v) (v).frame.origin.x
-#define Y(v) (v).frame.origin.y
-#define WIDTH(v) (v).frame.size.width
-#define HEIGHT(v) (v).frame.size.height
-
 #define MinX(v) CGRectGetMinX((v).frame)
 #define MinY(v) CGRectGetMinY((v).frame)
 #define MidX(v) CGRectGetMidX((v).frame)
@@ -34,8 +19,34 @@
 #define MaxX(v) CGRectGetMaxX((v).frame)
 #define MaxY(v) CGRectGetMaxY((v).frame)
 
+#define IS_IPAD                 (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE               (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA               ([[UIScreen mainScreen] scale] >= 2.0)
+
+//判断是否是ipad
+#define isPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+//判断iPhone4系列
+#define isIPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+//判断iPhone5系列
+#define isIPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+//判断iPhone6 6s 7系列
+#define isIPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+//判断iPhone6p 6sp 7p系列
+#define isIPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+//判断iPhoneX，Xs（iPhoneX，iPhoneXs）
+#define IS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+//判断iPhoneXr
+#define IS_IPHONE_Xr ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+//判断iPhoneXsMax
+#define IS_IPHONE_Xs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size)&& !isPad : NO)
+
+//判断iPhoneX所有系列
+#define IS_IPhoneX_All (IS_IPHONE_X || IS_IPHONE_Xr || IS_IPHONE_Xs_Max)
+
+//高度
 #define kStatusBar_Height       [[UIApplication sharedApplication] statusBarFrame].size.height //状态栏高度 20,44
-#define kBottomBar_Height       ([[UIApplication sharedApplication] statusBarFrame].size.height>20?34:0) //底部距离
-#define kNavigationBar_Height   ([[UIApplication sharedApplication] statusBarFrame].size.height>20?88:64) //导航栏高度
+#define kNavigationBar_Height   [[UIApplication sharedApplication] statusBarFrame].size.height+44 //导航栏高度
+#define kBottomBar_Height       (IS_IPhoneX_All ? 34.0 : 0) //底部距离
+#define kTabBar_Height          (IS_IPhoneX_All ? 83.0 : 49.0)//tabbar高度
 
 #endif /* RectConst_h */
