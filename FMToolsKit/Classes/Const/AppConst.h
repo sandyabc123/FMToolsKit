@@ -19,7 +19,7 @@
 #define FMScale(h)  (h*[UIScreen mainScreen].bounds.size.width/375.0)
 
 //获取window
-#define MAIN_WINDOW     [UIApplication sharedApplication].keyWindow
+#define MAIN_WINDOW     [[[UIApplication sharedApplication] delegate] window]
 
 //获取AppDelegate
 #define kAppdelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])

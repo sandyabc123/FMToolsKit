@@ -15,82 +15,26 @@
  *
  *  @return 当前ViewController
  */
-+ (UIViewController *) getCurrentController
++ (UIViewController *)currentController
 {
-    UIViewController *result = nil;
+    UIViewController* vc = [UIApplication sharedApplication].keyWindow.rootViewController;
     
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
-        NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows)
-        {
-            if (tmpWin.windowLevel == UIWindowLevelNormal)
-            {
-                window = tmpWin;
-                break;
-            }
+    while (1) {
+        
+        if ([vc isKindOfClass:[UITabBarController class]]) {
+            vc = ((UITabBarController*)vc).selectedViewController;
         }
-    }
-    
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-    
-//    if ([nextResponder isKindOfClass:[UIViewController class]])
-//        result = nextResponder;
-//    else
-//        result = window.rootViewController;
-//    
-    if ([nextResponder isKindOfClass:[UITabBarController class]]){
-        UITabBarController * tabbar = (UITabBarController *)nextResponder;
-        result = [tabbar selectedViewController];
-    }else if ([nextResponder isKindOfClass:[UINavigationController class]]){
-        UIViewController * nav = (UIViewController *)nextResponder;
-        result = nav.childViewControllers.lastObject;
-    }else{
-        result = nextResponder;
-    }
-
-    return result;
-}
-
-/**
- *  获取当前正在显示的ViewController
- *
- *  @return 当前ViewController
- */
-+ (UIViewController *) currentController
-{
-    UIViewController *result = nil;
-    
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
-        NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows)
-        {
-            if (tmpWin.windowLevel == UIWindowLevelNormal)
-            {
-                window = tmpWin;
-                break;
-            }
+        if ([vc isKindOfClass:[UINavigationController class]]) {
+            vc = ((UINavigationController*)vc).visibleViewController;
         }
+        if (vc.presentedViewController) {
+            vc = vc.presentedViewController;
+        }else{
+            break;
+        }
+        
     }
-    
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-    
-    if ([nextResponder isKindOfClass:[UITabBarController class]]){
-        UITabBarController * tabbar = (UITabBarController *)nextResponder;
-        result = [tabbar selectedViewController];
-    }else if ([nextResponder isKindOfClass:[UINavigationController class]]){
-        UIViewController * nav = (UIViewController *)nextResponder;
-        result = nav.childViewControllers.lastObject;
-    }else{
-        result = nextResponder;
-    }
-    
-    return result;
+    return vc;
 }
 
 @end

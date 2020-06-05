@@ -47,7 +47,6 @@
 		86A5A2EF52C1CD69E198E9F6899CE9F5 /* UIImage+UIImageScale.h in Headers */ = {isa = PBXBuildFile; fileRef = B8152FB2BA0CA38D028C70D0ED88E9DA /* UIImage+UIImageScale.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DDA0FE5BD9EA4DA6B6ADAAC3FF59C09 /* CAGradientLayer+Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = CCEAECE5ECB40F269563D58AE1073EBA /* CAGradientLayer+Layer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96D587C951E53C289F20EF7275467C19 /* UIView+DropShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 450D945373CFD83A7134988D9050C2BF /* UIView+DropShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99AAA7676D32CFA8E9472BB48C7C849A /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E49CE8F43EC47C60E896CDF7CACA5C0 /* UIView+Additions.m */; };
 		9AA12AD8C7DA7556E64934C0A3904FAA /* ColorConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE98A010FCCEB97397395B347CA8808 /* ColorConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D450B165E358A24631B192E60109CA7 /* UIView+Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = F0A869E6A966B33B9C643C549FCFC2AD /* UIView+Frame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A63CD118AF46E544DEF81938296D9471 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 910604B69C26D128AB970FC841E69DC4 /* EGOCache.m */; };
@@ -58,7 +57,6 @@
 		CF5726881E5D900FEB51C03A2B14F1B5 /* FontConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7B4129CABAD6DF3B34ED389B94A3B3 /* FontConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3A7BA54481B2780FDCAA2537A6A2514 /* UIImage+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 850060163A0DAB9D7A347964CA5E2DEE /* UIImage+Color.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9EFEE08E50CD8FAA416FB4AEB3C4584 /* NSString+Chinese.h in Headers */ = {isa = PBXBuildFile; fileRef = BF506A4F22CBAF8852FE643673ACEF3D /* NSString+Chinese.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCA962ACEC0E2B54E7CBAD369F5870AB /* UIView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3174D5731CC30575D05D58F7E69F08CB /* UIView+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E09CC948392AF2CDA98440FA8302BA58 /* UIViewController+CurrentController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8673AB29B391592EE8BD0808B4B4580F /* UIViewController+CurrentController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDF3DCCEAA180555ADEB03BDAA3A25D7 /* UIViewController+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC136B8C54A6633B5627C479ACDB50F /* UIViewController+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF4D7DC2731F2D44090A06570394DC45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -100,7 +98,6 @@
 		2D2E261242D76D6A483A3604496C4464 /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		2E3C89C7BC194471A7E80B79196372E8 /* Pods-FMToolsKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FMToolsKit_Example-dummy.m"; sourceTree = "<group>"; };
 		2FF1B16D831482C052DBF832BE61EB7E /* UIViewController+Extension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
-		3174D5731CC30575D05D58F7E69F08CB /* UIView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		34FFD73CC1A7D648E31214F9C18C440B /* Pods-FMToolsKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FMToolsKit_Example-Info.plist"; sourceTree = "<group>"; };
 		3E1384D7F7EBA21C2AF773CEA8AEC877 /* FMToolsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMToolsKit-umbrella.h"; sourceTree = "<group>"; };
@@ -125,7 +122,6 @@
 		85EF810B7A39CD511E45149878BB40E8 /* Pods_FMToolsKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FMToolsKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		865495010970D96743444C48CBB397E2 /* UIImage+Color.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		8673AB29B391592EE8BD0808B4B4580F /* UIViewController+CurrentController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CurrentController.h"; sourceTree = "<group>"; };
-		8E49CE8F43EC47C60E896CDF7CACA5C0 /* UIView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		8E69B228DAE4C672A904CA4AE8D41130 /* NSData+Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		8EB58B470DD14C2A3393872AD2C218C6 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = FMToolsKit/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		910604B69C26D128AB970FC841E69DC4 /* EGOCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
@@ -218,8 +214,6 @@
 				D51055B99F3F67660D7178FB59829D00 /* UILabel+ChangeLineSpace.m */,
 				BE0E33CADC453D0EC40BC82897F6FE66 /* UITextView+Placeholder.h */,
 				CD78384DDFFF8FF93B52B15EAB65497D /* UITextView+Placeholder.m */,
-				3174D5731CC30575D05D58F7E69F08CB /* UIView+Additions.h */,
-				8E49CE8F43EC47C60E896CDF7CACA5C0 /* UIView+Additions.m */,
 				B05878B630180BFB2797423C915D2373 /* UIView+DrawDashLine.h */,
 				92E0742ABCD74DE2450AFF84C057A670 /* UIView+DrawDashLine.m */,
 				450D945373CFD83A7134988D9050C2BF /* UIView+DropShadow.h */,
@@ -446,7 +440,6 @@
 				86A5A2EF52C1CD69E198E9F6899CE9F5 /* UIImage+UIImageScale.h in Headers */,
 				B6AA8B60089D89C3996526D013CD3308 /* UILabel+ChangeLineSpace.h in Headers */,
 				1812CE7FADE69471A7CEC7BA79E94FD4 /* UITextView+Placeholder.h in Headers */,
-				DCA962ACEC0E2B54E7CBAD369F5870AB /* UIView+Additions.h in Headers */,
 				2306FC49EBB52E8F469BE6E5D6472237 /* UIView+DrawDashLine.h in Headers */,
 				96D587C951E53C289F20EF7275467C19 /* UIView+DropShadow.h in Headers */,
 				9D450B165E358A24631B192E60109CA7 /* UIView+Frame.h in Headers */,
@@ -622,7 +615,6 @@
 				4FB7638EDFB35A6D5B6FD6CDAEF7FD58 /* UIImage+UIImageScale.m in Sources */,
 				682EA6CBB171967B1C4FEB666B3D14B8 /* UILabel+ChangeLineSpace.m in Sources */,
 				7D29B9A53411800230FFC8BA8B593213 /* UITextView+Placeholder.m in Sources */,
-				99AAA7676D32CFA8E9472BB48C7C849A /* UIView+Additions.m in Sources */,
 				3FB25E18044DC6CFB6272C1104F22B02 /* UIView+DrawDashLine.m in Sources */,
 				6858A6F06DF956CA9D2CD54B8E2510FC /* UIView+DropShadow.m in Sources */,
 				43D32BAD74F280C475A7B2CFCDB0D3EB /* UIView+Frame.m in Sources */,

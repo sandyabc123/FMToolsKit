@@ -11,17 +11,10 @@
 @interface UIViewController (CurrentController)
 
 /**
- *  获取当前正在显示的ViewController
- *
- *  @return 当前ViewController
- */
-+ (UIViewController *) getCurrentController;
-
-/**
- *  获取当前正在显示的ViewController
- *
- *  @return 当前ViewController
- */
-+ (UIViewController *) currentController;
+*  获取当前正在显示的ViewController
+*
+*  @return 当前ViewController
+*/
++ (UIViewController *)currentController;
 
 @end
